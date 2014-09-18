@@ -18,18 +18,18 @@ plugin project.
   <email>hartmut@php.net</email>
   <active>yes</active>
  </lead>
- <date>2007-04-18</date>
- <time>18:17:58</time>
+ <date>2009-02-16</date>
  <version>
-  <release>0.1.0dev</release>
-  <api>0.1.0dev</api>
+  <release>0.9.3dev</release>
+  <api>0.9.3dev</api>
  </version>
  <stability>
   <release>alpha</release>
   <api>alpha</api>
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
- <notes>initial package release
+ <notes>
+Additions and changes since 0.9.2:
  </notes>
  <contents>
   <dir name="/">
@@ -80,9 +80,78 @@ plugin project.
    <package>
     <name>CodeGen</name>
     <channel>pear.php.net</channel>
-    <min>1.0.3</min>
+    <min>1.0.6</min>
+   </package>
+   <package>
+    <name>CodeGen_MySQL</name>
+    <channel>pear.php.net</channel>
+    <min>1.0.0RC1</min>
    </package>
   </required>
  </dependencies>
- <phprelease />
+ <phprelease>
+  <installconditions>
+   <os><name>windows</name></os>
+  </installconditions>
+  <filelist>
+   <install name="scripts/mysql-plugin-gen.bat" as="mysql-plugin-gen.bat"/>
+   <ignore name="scripts/mysql-plugin-gen.sh"/>
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <!-- all non-windows systems -->
+  <filelist>
+   <install name="scripts/mysql-plugin-gen.sh" as="mysql-plugin-gen"/>
+   <ignore name="scripts/mysql-plugin-gen.bat"/>
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <date>2009-02-16</date>
+   <version>
+    <release>0.9.2</release>
+    <api>0.9.2</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license uri="http://www.php.net/license">PHP</license>
+   <notes>
+    Additions and changes since 0.9.1dev:
+    - now supporting system variables (global and session)
+    - misc. minor code generation fixes and improvements
+   </notes>
+  </release> 
+  <release>
+   <date>2007-09-17</date>
+   <version>
+    <release>0.9.1dev</release>
+    <api>0.9.1dev</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license uri="http://www.php.net/license">PHP</license>
+   <notes>
+    - added test support
+    - #include generation now working
+   </notes>
+  </release>
+  <release>
+   <date>2007-04-18</date>
+   <time>18:17:58</time>
+   <version>
+    <release>0.1.0dev</release>
+    <api>0.1.0dev</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license uri="http://www.php.net/license">PHP</license>
+   <notes>initial package release</notes>
+  </release>
+ </changelog>
 </package>
