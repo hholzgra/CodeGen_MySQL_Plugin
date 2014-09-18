@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<plugin name="statusvar_array">
+  <maintainer>
+    <name>Hartmut Holzgraefe</name>
+    <email>hartmut@mysql.com</email>
+  </maintainer>
+
+  <license>GPL</license>
+
+  <release>
+    <version>0.0.1</version>
+    <date>2004-05-25</date>
+    <state>beta</state>
+    <notes>
+     First working release
+    </notes>
+  </release>
+
+ <daemon name="statusvar_array">
+  <summary>Array statusvar example</summary>
+
+  <statusvar type="array" name="dummy">
+   <statusvar type="int" name="foo" init="23"/> <!-- C variable will be named "dummy_foo" --> 
+   <statusvar type="int" name="bar" init="42"/> <!-- C variable will be named "dummy_foo" -->
+  </statusvar>
+
+ </daemon>
+
+</plugin>
