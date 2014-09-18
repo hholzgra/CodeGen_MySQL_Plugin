@@ -4,7 +4,7 @@
 /**
 * Console script to generate MySQL plugins from command line
 *
-* @author Hartmut Holzgraefe <hartmut@six.de>
+* @author Hartmut Holzgraefe <hartmut@php.net>
 * @version $Id$
 */
 
@@ -21,7 +21,6 @@ $extension = new CodeGen_MySQL_Plugin_Extension;
 $command = new CodeGen_Command($extension);
 
 $parser = new CodeGen_MySQL_Plugin_ExtensionParser($extension);
-
 $command->execute($parser);
 
 ?>
